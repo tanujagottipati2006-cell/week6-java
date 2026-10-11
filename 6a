@@ -1,0 +1,23 @@
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+public class TestServlet extends HttpServlet
+{
+    public void doGet(HttpServletRequest req,
+                      HttpServletResponse res)
+                      throws ServletException, IOException
+    {
+        res.setContentType("text/html");
+
+        PrintWriter pw = res.getWriter();
+
+        pw.println("<html>");
+        pw.println("<body>");
+        pw.println("<h2>Servlet is Running Successfully</h2>");
+        pw.println("</body>");
+        pw.println("</html>");
+
+        pw.close();
+    }
+}
